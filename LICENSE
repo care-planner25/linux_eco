@@ -1,0 +1,41 @@
+Copyright © 2026 Care-Planner by L'Espace d'Être Soi
+Tous droits réservés.
+
+================================================================================
+LICENCE PROPRIÉTAIRE — LOGICIEL « Eco-système » / écosystème Care-Planner
+================================================================================
+
+Ce logiciel, son code source, ses ressources (icônes, styles, configurations)
+et sa documentation (ci-après « le Logiciel ») sont la propriété exclusive de
+L'Espace d'Être Soi (« Care-Planner »).
+
+Le Logiciel est protégé par le droit d'auteur et les traités internationaux.
+
+1. DROITS RÉSERVÉS
+   Tous les droits non expressément accordés par écrit par L'Espace d'Être Soi
+   sont réservés. Aucune licence n'est concédée de manière implicite.
+
+2. INTERDICTIONS
+   Sauf autorisation écrite préalable de L'Espace d'Être Soi, il est interdit de :
+   - copier, reproduire, publier ou distribuer tout ou partie du Logiciel ;
+   - modifier, adapter, traduire ou créer des œuvres dérivées ;
+   - décompiler, désassembler ou pratiquer l'ingénierie inverse ;
+   - revendre, louer, prêter ou concéder le Logiciel à un tiers ;
+   - retirer ou altérer les mentions de propriété et de droit d'auteur.
+
+3. ABSENCE DE GARANTIE
+   Le Logiciel est fourni « EN L'ÉTAT », sans garantie d'aucune sorte, expresse
+   ou implicite, notamment de qualité marchande ou d'adéquation à un usage
+   particulier.
+
+4. LIMITATION DE RESPONSABILITÉ
+   En aucun cas L'Espace d'Être Soi ne pourra être tenue responsable d'un
+   quelconque dommage direct ou indirect résultant de l'utilisation ou de
+   l'impossibilité d'utiliser le Logiciel.
+
+5. COMPOSANTS TIERS
+   Le Logiciel s'appuie sur des composants tiers (par exemple Electron et ses
+   dépendances), distribués sous leurs propres licences. Ces licences
+   s'appliquent uniquement auxdits composants, et non au présent Logiciel.
+
+Contact : contact@care-planner.org
