@@ -1,0 +1,37 @@
+{
+  "name": "ecosysteme",
+  "productName": "Eco-système",
+  "version": "1.0.0",
+  "description": "Client de bureau de l'écosystème Care-Planner",
+  "author": "Care-Planner by L'Espace d'Être Soi <contact@care-planner.org>",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux AppImage deb"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "org.careplanner.ecosysteme",
+    "productName": "Eco-système",
+    "artifactName": "EcoSysteme-${version}.${ext}",
+    "directories": { "output": "dist" },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "build/icon.png"
+    ],
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "build/icon.png",
+      "category": "Network",
+      "executableName": "ecosysteme",
+      "maintainer": "L'Espace d'Être Soi <contact@care-planner.org>",
+      "synopsis": "Écosystème Care-Planner"
+    }
+  }
+}
