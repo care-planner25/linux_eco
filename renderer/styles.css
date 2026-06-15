@@ -1,0 +1,125 @@
+:root {
+  --bg:       #1F2933;
+  --bg2:      #2B3947;
+  --accent:   #3B82F6;
+  --hover:    #34465A;
+  --text-dim: #DCDCDC;
+  --disabled: #606E7E;
+  --bar:      48px;
+  --tab:      34px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: #fff;
+  font-family: "Segoe UI", "Cantarell", "Ubuntu", "Noto Sans", sans-serif;
+  font-size: 14px;
+  user-select: none;
+  overflow: hidden;
+}
+
+body { display: flex; flex-direction: column; }
+
+/* ----- Barre d'outils ----- */
+#bar {
+  display: flex;
+  align-items: stretch;
+  height: var(--bar);
+  background: var(--bg2);
+  flex: 0 0 auto;
+}
+
+#nav { display: flex; padding-left: 4px; }
+
+#nav button,
+#newtab {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+#nav button { width: 42px; }
+#newtab     { width: 42px; font-size: 22px; }
+
+#nav button:hover,
+#newtab:hover { background: var(--hover); }
+
+#nav button:disabled {
+  color: var(--disabled);
+  background: transparent;
+  cursor: default;
+}
+
+/* ----- Bande d'onglets ----- */
+#tabstrip {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#tabstrip::-webkit-scrollbar { height: 0; }
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: var(--bar);
+  min-width: 130px;
+  max-width: 210px;
+  padding: 0 2px 0 10px;
+  background: var(--bg2);
+  color: var(--text-dim);
+  cursor: pointer;
+  margin-right: 1px;
+}
+.tab .ico {
+  width: 16px; height: 16px;
+  flex: 0 0 auto;
+  filter: brightness(0) invert(1);   /* logo recoloré en blanc */
+}
+.tab .ttl {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+.tab .x {
+  width: 26px;
+  flex: 0 0 auto;
+  text-align: center;
+  font-size: 16px;
+  opacity: .65;
+  border-radius: 4px;
+}
+.tab .x:hover { opacity: 1; background: rgba(255,255,255,.12); }
+
+/* ----- Écosystème (à droite) ----- */
+#eco { display: flex; padding-right: 8px; flex: 0 0 auto; }
+
+.eco {
+  width: 40px;
+  margin: 7px 2px;            /* hauteur effective = 34px */
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.eco img {
+  width: 18px; height: 18px;
+  filter: brightness(0) invert(1);   /* logo blanc */
+}
+.eco svg { width: 19px; height: 19px; }
+
+/* ----- Zone de contenu (webviews) ----- */
+#views { position: relative; flex: 1 1 auto; }
+#views webview { position: absolute; inset: 0; width: 100%; height: 100%; }

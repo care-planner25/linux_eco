@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>Eco-système</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bar">
+    <div id="nav">
+      <button data-act="back"    title="Précédent">&#8592;</button>
+      <button data-act="forward" title="Suivant">&#8594;</button>
+      <button data-act="reload"  title="Recharger (F5)">&#10227;</button>
+      <button data-act="home"    title="Accueil">&#8962;</button>
+    </div>
+    <div id="tabstrip"></div>
+    <button id="newtab" title="Nouvel onglet (Ctrl+T)">+</button>
+    <div id="eco"></div>
+  </div>
+  <div id="views"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
