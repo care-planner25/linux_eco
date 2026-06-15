@@ -5,6 +5,7 @@
   "description": "Client de bureau de l'écosystème Care-Planner",
   "author": "Care-Planner by L'Espace d'Être Soi <contact@care-planner.org>",
   "license": "UNLICENSED",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -22,12 +23,11 @@
     "files": [
       "main.js",
       "preload.js",
-      "renderer/**/*",
-      "build/icon.png"
+      "renderer/**/*"
     ],
     "linux": {
       "target": ["AppImage", "deb"],
-      "icon": "build/icon.png",
+      "icon": "renderer/careplanner.png",
       "category": "Network",
       "executableName": "ecosysteme",
       "maintainer": "L'Espace d'Être Soi <contact@care-planner.org>",
