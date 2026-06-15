@@ -1,0 +1,43 @@
+name: Build Eco-système (Linux, Electron)
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Dépendances système (.deb)
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fakeroot
+
+      - name: Installer les dépendances npm
+        run: npm install
+
+      - name: Construire (AppImage + .deb)
+        run: npx electron-builder --linux AppImage deb
+
+      - name: Publier les paquets (artefact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ecosysteme-linux
+          path: |
+            dist/*.AppImage
+            dist/*.deb
+
+      - name: Joindre les paquets à la Release (si tag)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.AppImage
+            dist/*.deb
